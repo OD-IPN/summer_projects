@@ -599,9 +599,7 @@ function logout(){
 //@Return void.
 //**********************
 function contentProgram($id_programa){
-	echo $id_programa;
 include '../Model/consultas.php';
-	echo "content Program";
 $sedes=consultaSedesPrograma($id_programa, $conexion);
 $locations = json_decode($sedes);
 $proyecto = consultaInfoProyecto($id_programa, $conexion);
@@ -713,9 +711,7 @@ echo   '<h2>INFORMACIÓN SOBRE: <br/></h2>
 //@Return void.
 //**********************
 function contentProgramMLB($id_programa){
-echo $id_programa;
 include '../Model/consultas.php';
-echo "content Programe MLB";
 //$sedes=consultaSedesProgramaMLB($conexion);	
 //$locations = json_decode($sedes);
 $locations = array(
@@ -933,19 +929,16 @@ echo   '<h2>INFORMACIÓN SOBRE: <br/></h2>
 function indexContent($programa){
 	switch ($programa) {
 		case 'MLB':
-		echo "case";
 			contentProgramMLB('2');
 			$index=1;
 			break;
 
 		case 'SL':
-		echo "case";
 			contentProgram('1');
 			$index=1;
 			break;
 		
 		default:
-		echo "case";
 		echo '		<h2>Elige tu proyecto</h2>
 					<div class="pad_bot2">
 						<table>

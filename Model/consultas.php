@@ -1,5 +1,4 @@
 <?php 
-echo "consultas HERE! again";
 include 'conexion.php';
 function consultaUsuario($email, $conexion){
 	$consul="SELECT * FROM `usuario` WHERE  `email` =  '".$email."';";
@@ -810,20 +809,14 @@ function reporteInscritos($reporte, $conexion){
 	return $result;
 	
 }
-function mysql_fetch_all($result){
-	//$return = array();
-	//while($row=mysql_fetch_array($result)) {
-      // array_push($return, $row);
-       //$return[] = $row;
-	//return $return;
-}
-/*function mysql_fetch_all($result) {
+
+
+//SELECT * FROM `cursos` WHERE `id_programa` = '1' and `sede` = '1';
+function mysql_fetch_all($result) {
    $return = [];
    while($row=mysql_fetch_array($result)) {
        $return[] = $row;
    }
    return $return;
-}*/
-
-
+}
 ?>
